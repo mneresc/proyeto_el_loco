@@ -2,7 +2,7 @@
   "name": "Proyecto El Loco — Español A1",
   "short_name": "El Loco A1",
   "description": "Guía visual A1 — Proyecto El Loco (Onepage)",
-  "start_url": "./index.html",
+  "start_url": "../index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F9F2E4",
