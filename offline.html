@@ -6,45 +6,16 @@
     <title>Proyecto El Loco — Español A1</title>
     <link rel="icon" href="images/geradas/icon-latam-1024.png" />
     <link rel="stylesheet" href="assets/css/style.css" />
-
-    <link rel="manifest" href="assets/manifest.webmanifest" />
-    <meta name="theme-color" content="#173D66" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="El Loco A1" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/icons/apple-touch-icon-180.png"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3)"
-      href="assets/icons/splash-1290x2796.png"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3)"
-      href="assets/icons/splash-1179x2556.png"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3)"
-      href="assets/icons/splash-1170x2532.png"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      media="(min-device-width: 1024px) and (min-device-height: 1366px)"
-      href="assets/icons/splash-2048x2732.png"
-    />
-    <meta name="format-detection" content="telephone=no" />
-    <meta
-      name="viewport"
-      content="viewport-fit=cover, width=device-width, initial-scale=1"
-    />
   </head>
   <body>
     <aside class="sidebar open">
+      <div class="card">
+        <h1>Estás offline</h1>
+        <p>
+          Sin conexión. Cuando vuelva internet, el contenido se actualizará.
+        </p>
+        <p><a href="./index.html">Reintentar</a></p>
+      </div>
       <div class="brand">
         <img src="images/geradas/apple-touch-icon-latam.png" alt="LATAM" />
         <div>
@@ -105,14 +76,13 @@
 
     <header class="topbar">
       <div class="container">
-        <h2>Español A1</h2>
+        <h2>Español A1 — Onepage</h2>
+        <p>Guía visual con ejemplos ilustrados</p>
       </div>
     </header>
 
     <main class="content container">
       <h1 id="inicio">Inicio</h1>
-
-      <hr class="sep" />
 
       <h2 id="unidad-1---saludos-y-presentaciones">
         Unidad 1 — Saludos y presentaciones
@@ -120,13 +90,15 @@
       <div class="callout bloque">
         <div class="callout-title">1ª – Objetivo funcional</div>
         <div class="callout-content">
-          Saludar, presentarse y despedirse en situaciones cotidianas. [!bloque]
-          <strong>Patrón‑objetivo (2–3 líneas)</strong>
-          <strong>Hola, soy</strong> + nombre; <strong>Me llamo</strong> +
-          nombre. <strong>¿Cómo te llamas?</strong> /
-          <strong>¿De dónde eres?</strong> — <strong>Soy de</strong> +
-          país/ciudad. <strong>Adiós</strong>, <strong>hasta luego</strong>.
-          [!bloque] 3ª – Tabla‑resumen
+          Saludar, presentarse y despedirse en situaciones cotidianas.
+          <blockquote>
+            <strong>Patrón‑objetivo (2–3 líneas)</strong>
+            <strong>Hola, soy</strong> + nombre; <strong>Me llamo</strong> +
+            nombre. <strong>¿Cómo te llamas?</strong>
+            <strong>¿De dónde eres?</strong> — <strong>Soy de</strong> +
+            país/ciudad. <strong>Adiós</strong>, <strong>hasta luego</strong>.
+          </blockquote>
+          3ª – Tabla‑resumen
         </div>
       </div>
       <div class="card">
@@ -1197,13 +1169,5 @@
     </footer>
 
     <script src="assets/js/app.js"></script>
-
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker.register("./sw.js").catch(console.error);
-        });
-      }
-    </script>
   </body>
 </html>
