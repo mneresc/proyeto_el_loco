@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Español - Neres's Space</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --sidebar-bg: #f7f6f3;
+            --text-color: #37352f;
+            --text-muted: #787774;
+            --primary-color: #6941c6;
+            --primary-light: #f0ebf8;
+            --border-color: #e9e9e7;
+            --hover-bg: #eef3f3;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-sans);
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar (Simplified for sub-pages) */
+        .sidebar {
+            width: 280px;
+            background-color: var(--sidebar-bg);
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            flex-shrink: 0;
+        }
+
+        .sidebar-header {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .user-avatar {
+            width: 24px;
+            height: 24px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: 2px;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .nav-item:hover { background-color: rgba(0,0,0,0.04); }
+        .nav-item.active { background-color: var(--primary-light); color: var(--primary-color); font-weight: 500; }
+        .nav-icon { margin-right: 0.5rem; opacity: 0.7; }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 3rem 5rem;
+        }
+
+        .page-header { margin-bottom: 3rem; }
+        .breadcrumbs { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; }
+        .breadcrumbs a { color: inherit; text-decoration: none; }
+        .breadcrumbs a:hover { text-decoration: underline; }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: -0.03em;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            line-height: 1.5;
+            max-width: 700px;
+        }
+
+        /* List View */
+        .content-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 2rem;
+        }
+
+        .content-item {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.2s;
+        }
+
+        .content-item:hover {
+            background-color: var(--hover-bg);
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .item-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            body { flex-direction: column; overflow: auto; }
+            .sidebar { width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--border-color); }
+            .main-content { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <div class="user-avatar">N</div>
+            <span>Neres's Space</span>
+        </div>
+        
+        <a href="../../index.html" class="nav-item">
+            <span class="nav-icon">🏠</span> Início
+        </a>
+        <a href="#" class="nav-item active">
+            <span class="nav-icon">🇪🇸</span> Espanhol
+        </a>
+    </nav>
+
+    <main class="main-content">
+        <div class="page-header">
+            <div class="breadcrumbs">
+                <a href="../../index.html">home</a> / idiomas / espanhol
+            </div>
+            <h1>Espanhol</h1>
+            <p class="subtitle">
+                Recursos, anotações e guias para aprender espanhol.
+            </p>
+        </div>
+
+        <div class="content-list">
+            <a href="apostila.html" class="content-item">
+                <div class="item-title">
+                    <span>📄</span> Apostila A1
+                </div>
+                <div class="item-desc">Guía visual completa del nivel A1. Gramática, vocabulario y ejercicios.</div>
+            </a>
+            <a href="verbos-irregulares-comunes.html" class="content-item">
+                <div class="item-title">
+                    <span>⚡</span> Verbos Irregulares Comunes
+                </div>
+                <div class="item-desc">Lista y conjugación de los verbos irregulares más frecuentes (Ingeniería Verbal).</div>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
